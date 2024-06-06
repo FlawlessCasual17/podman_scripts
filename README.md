@@ -1,7 +1,16 @@
 # podman_scripts
- My shell scripts for configuring a new podman machine instance 
+ My shell scripts for configuring a new podman machine instance
+
+> [!IMPORTANT]
+> Make sure you change the password or set a 
+> password for the user before executing the first script!
+
+```bash
+sudo passwd $USER
+```
 
 ## Do the following in order
+
 
 1. Make sure to do this in a bash shell
 
