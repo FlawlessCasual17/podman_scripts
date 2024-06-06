@@ -1,0 +1,13 @@
+#!/usr/bin/env fish
+
+# Part 1
+curl -sL 'https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish' | source && fisher install jorgebucaran/fisher
+
+# Part 2
+fisher install jorgebucaran/replay.fish
+fisher install catppuccin/fish
+fisher install kidonng/nix.fish 
+fisher install kidonng/nix-completions.fish
+
+# Part 3
+curl 'https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install' | fish

@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+sudo --validate
+
+# Part 1
+sudo dnf update -y
+sudo dnf groupinstall -y 'Development Tools'
+sudo dnf install -y procps-ng curl file git lsd
+
+# Part 2
+if [ ! -d /home/linuxbrew ]; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+brew install fzf micro fd oh-my-posh topgrade ripgrep fish
+sudo ln -s $(which fish) /bin/fish
+sudo ln -s $(which fzf) /bin/fzf
+sudo ln -s $(which fd) /bin/fd
+sudo ln -s $(which micro) /bin/micro
+sudo ln -s $(which rg) /bin/rg
+
+# Part 3
+sh <(curl -L https://nixos.org/nix/install) --daemon
+exec bash
+nix-env -i wslu
+
+# Part 4
+echo "/bin/fish" | sudo tee -a /etc/shells
+echo "/usr/bin/fish" | sudo tee -a /etc/shells
+sudo chsh user --shell /bin/fish
