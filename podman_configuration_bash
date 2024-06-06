@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-sudo --validate
+if sudo -v; then 
+    echo "Proceeding..."
+else
+    echo "You do not have sudo privileges."
+    exit 1
+fi
 
 # Part 1
 sudo dnf update -y
