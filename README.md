@@ -1,5 +1,5 @@
-# podman_scripts
- My shell scripts for configuring a new podman machine instance
+# `podman` scripts
+My shell scripts for configuring a new podman machine instance
 
 > [!IMPORTANT]
 > Make sure you change the password or set a 
