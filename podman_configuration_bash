@@ -19,13 +19,16 @@ if sudo -v; then
     fi
     
     # Part 3
-    sh <(curl -L https://nixos.org/nix/install) --daemon
+    if [ ! -d /nix/ ]; then
+        sh <(curl -L https://nixos.org/nix/install) --daemon
+    fi
     
     # Part 4
     echo "/bin/fish" | sudo tee -a /etc/shells
     echo "/usr/bin/fish" | sudo tee -a /etc/shells
     sudo chsh user --shell /bin/fish
-    exec bash && nix-env -i wslu
+    echo -e "Please manually execute the following as the script cannot do it:\nnix-env -i wslu"
+    exec bash
 else
     echo "You do not have sudo privileges."
     exit 1
