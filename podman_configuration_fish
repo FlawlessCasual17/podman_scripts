@@ -10,25 +10,5 @@ fisher install kidonng/nix.fish
 fisher install kidonng/nix-completions.fish
 
 # Part 3
-function read_confirm
-    while true
-        read -l -P 'Do you want to continue with the installation (This will install oh-my-fish)?  [y/N] ' confirm
-        switch $confirm
-            case Y y
-                return 0
-            case '' N n
-                return 1
-        end
-    end
-end
-
-if read_confirm
-    echo 'Proceeding...'
-    curl 'https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install' | fish
-else
-    echo 'Won''t install oh-my-fish'
-    echo 'You can install oh-my-fish manually by running: '
-    echo "curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish"
-end
-
-
+echo 'Install oh-my-fish manually by running: '
+echo "curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish"
