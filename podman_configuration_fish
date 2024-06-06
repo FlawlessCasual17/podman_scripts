@@ -30,7 +30,7 @@ if read_confirm
 else
     echo 'Won't install oh-my-fish'
     echo 'You can install oh-my-fish manually by running: '
-    echo "curl 'https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install' | fish"
+    echo "curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish"
 end
 
 
