@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 # Test if fish is installed
-bash -c 'if ! command -V fish > /dev/null 2>&1; then; echo "Please make sure to install fish before executing this script!"; exit; fi'
+bash -c 'if ! command -V fish &> /dev/null; then; echo "Please make sure to install `fish` before executing this script!"; exit; fi'
 
 # Part 1
 curl -sL 'https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish' | source && fisher install jorgebucaran/fisher
