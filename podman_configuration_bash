@@ -10,7 +10,7 @@ if sudo -v; then
     if [ ! -d /home/linuxbrew ]; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-        brew install fzf micro fd oh-my-posh topgrade ripgrep fish
+        brew install fzf micro fd oh-my-posh topgrade ripgrep fish atuin
         sudo ln -s $(which fish) /bin/fish
         sudo ln -s $(which fzf) /bin/fzf
         sudo ln -s $(which fd) /bin/fd
