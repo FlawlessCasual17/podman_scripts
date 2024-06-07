@@ -16,6 +16,8 @@ if sudo -v; then
         sudo ln -s $(which fd) /bin/fd
         sudo ln -s $(which micro) /bin/micro
         sudo ln -s $(which rg) /bin/rg
+        sudo ln -s $(which bat) /bin/bat
+        sudo ln -s $(which btm) /bin/btm
     fi
     
     # Part 3
